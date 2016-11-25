@@ -61,7 +61,7 @@ angular.module('myApp').factory('BlogService', ['$http', '$q', function($http, $
  
     function deleteBlog(id) {
         var deferred = $q.defer();
-        $http.delete(REST_SERVICE_URI+id)
+        $http.del(REST_SERVICE_URI+id)
             .then(
             function (response) {
                 deferred.resolve(response.data);

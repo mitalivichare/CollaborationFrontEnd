@@ -61,7 +61,7 @@ angular.module('myApp').factory('ForumService', ['$http', '$q', function($http, 
  
     function deleteForum(id) {
         var deferred = $q.defer();
-        $http.delete(REST_SERVICE_URI+id)
+        $http.del(REST_SERVICE_URI+id)
             .then(
             function (response) {
                 deferred.resolve(response.data);

@@ -5,7 +5,7 @@ var App = angular.module('myApp',['ngRoute']);
 app.config(function($routeProvider) {
 	$routeProvider
 	
-	.when('/', {
+	.when('/user', {
 		templateUrl : 'WEB-INF/views/UserManagement.html',
 		controller : 'UserController'
 			
@@ -23,6 +23,6 @@ app.config(function($routeProvider) {
 			
 	})
 	
-	.otherwise({redirectTo: '/'});
+	.otherwise({redirectTo: '/user'});
 	
 });
