@@ -162,7 +162,7 @@ app.controller('UserProfileController', ['$scope', '$http', '$cookieStore', 'Use
                          if(self.user.useremail!=="undefined")
                          {
                         	 console.log(self.user.approved);
-                        	 if(self.user.approved=='Y')
+                        	 if(self.user.approved==="Y")
      	    				{
      	    					$rootScope.currentUser = 
      	    					{

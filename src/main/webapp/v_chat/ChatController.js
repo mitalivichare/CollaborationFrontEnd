@@ -1,16 +1,20 @@
 app.controller("ChatController", function($scope, ChatService) {
+	
+	console.log('in chat');
+	
 	$scope.messages = [];
 	$scope.message = "";
 	$scope.max = 140;
 
 	$scope.addMessage = function() {
-		console.log("addMessage")
+		
 		ChatService.send($scope.message);
-		$scope.message = "";
+	 	$scope.message = "";
+	 	console.log("addMessage")
 	};
 
 	ChatService.receive().then(null, null, function(message) {
-		console.log("receive")
+		console.log("received " + message);
 
 		$scope.messages.push(message);
 	});
